@@ -158,9 +158,9 @@ static bool sdcardfs_setup_secondary(const std::string& default_path,
     if (use_esdfs) {
         return sdcardfs_setup(source_path, dest_path, fsuid, fsgid, multi_user, userid, gid, mask,
                               derive_gid, default_normal, unshared_obb, use_esdfs);
-    } else {
-        return sdcardfs_setup_bind_remount(default_path, dest_path, gid, mask);
     }
+        return sdcardfs_setup_bind_remount(default_path, dest_path, gid, mask);
+   
 }
 
 static void run_sdcardfs(const std::string& source_path, const std::string& label, uid_t uid,
